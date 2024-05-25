@@ -38,3 +38,5 @@ chmod +x clean_mac_temp_files.sh
 ```bash
 sudo ./clean_mac_temp_files.sh
 ```
+![Screenshot 2024-05-25 at 7 18 28 AM](https://github.com/TorranceTech/macOS-Temporary-Files-Cleaner/assets/170806445/b785266f-2a04-4e44-92cc-eb2298e368db)
+
