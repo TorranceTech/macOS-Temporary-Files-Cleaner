@@ -1,6 +1,6 @@
 # macOS Temporary Files Cleaner
 
-This open-source Bash script is designed to clean temporary files from your macOS system. It helps in freeing up disk space by removing logs, cache files, `.DS_Store` files, Time Machine snapshots, and other unnecessary temporary files. It also updates the Spotlight index and cleans Dock data sources to ensure your system runs smoothly.
+This open-source Bash script is designed to clean various types of files and directories on your macOS system. It helps in freeing up disk space by removing logs, cache files, `.DS_Store` files, and other unnecessary temporary files. It also restarts network services, cleans Time Machine snapshots, updates the Spotlight index, and cleans Dock data sources to ensure your system runs smoothly.
 
 ## Features
 
@@ -9,17 +9,18 @@ This open-source Bash script is designed to clean temporary files from your macO
 - Restarts network services.
 - Cleans system logs and crash reports.
 - Removes temporary files.
+- Removes File Remnants
 - Empties the Trash.
 - Cleans Time Machine snapshots.
 - Updates Spotlight index.
 - Cleans Dock data sources.
 - Provides a summary of free disk space after cleaning.
 
-- Supported macOS Versions: 10.3 up to 14.5
+- Supported macOS Versions
+This script should work on most versions of macOS.
 
-macOS 10.3 (Panther) and later versions up to macOS 14.5 Sonoma.
 - Important Note:
-Please note that some files may require administrator permissions to be deleted. These files are typically system-related or protected, and the script will skip them to prevent any unintended consequences. It's recommended to run the script with superuser privileges (sudo ./clean_mac_temp_files.sh) to ensure proper access and cleaning of temporary files.
+Please note that some files may require administrator permissions to be deleted. These files are typically system-related or protected, and the script will skip them to prevent any unintended consequences. It’s recommended to run the script with superuser privileges (sudo ./clean_mac_temp_files.sh) to ensure proper access and cleaning of temporary files.
 
 ## Installation and Usage
 
