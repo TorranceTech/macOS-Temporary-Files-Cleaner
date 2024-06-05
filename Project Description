@@ -1,3 +1,50 @@
+### Update: Added External Drive and USB Cleaning Functionality
+Changes Made:
+
+### New Feature: External Drive and USB Cleaning
+
+- Introduced a function clean_external_drives to detect and clean mounted external drives and USB devices.
+- The script now scans for external devices, checks their mount points, and applies the safe_rm function to clean them.
+
+### Improved Output Messages:
+
+- Added color-coded output messages to indicate the status of each cleaning operation more clearly.
+- 
+### Refactoring and Cleanup:
+
+- Refactored existing code for better readability and maintainability.
+- Ensured that all primary cleaning operations are maintained and enhanced with the new external drive cleaning capability.
+
+### Script Overview:
+
+- The script performs comprehensive system cleaning, including cache files, logs, temporary files, Time Machine snapshots, and more.
+- External drives and USB devices are now included in the cleaning process, ensuring that all connected storage devices are cleaned.
+
+* Usage:
+
+- Run the script as usual. The cleaning of external drives and USB devices will be handled automatically if they are detected and mounted.
+
+# Example Output:
+
+```
+Removing .DS_Store files...Done!
+Cleaning cache files...Done!
+Restarting network services...Done!
+Cleaning system logs and crash reports...Done!
+Cleaning temporary files...Done!
+Removing items from trash...Done!
+Cleaning Time Machine snapshots...Done!
+Updating Spotlight index...Done!
+Cleaning Dock data sources...Done!
+Cleaning external drives...
+Cleaning /Volumes/ExternalDrive1...Done!
+Cleaning /Volumes/USBDevice1...Done!
+Free space after cleaning: 50G
+
+```
+- This update significantly enhances the script's functionality, making it a more robust and versatile cleaning tool for macOS systems. 
+
+
 This open-source Bash script is designed to clean temporary files from your macOS system. It helps in freeing up disk space by removing logs, cache files, .DS_Store files, Time Machine snapshots, and other unnecessary temporary files. It also updates the Spotlight index and cleans Dock data sources to ensure your system runs smoothly.
 
 Features:
