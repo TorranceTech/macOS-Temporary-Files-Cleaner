@@ -15,20 +15,6 @@ safe_rm() {
     fi
 }
 
-# Function to clean external drives
-clean_external_drives() {
-    echo -e "${GREEN}Cleaning external drives...${NC}"
-    for disk in $(diskutil list | grep 'external' | awk '{print $NF}'); do
-        mount_point=$(diskutil info "$disk" | grep 'Mount Point' | awk -F': ' '{print $2}')
-        if [ "$mount_point" != "Not mounted" ] && [ -n "$mount_point" ]; then
-            echo -e "${GREEN}Cleaning $mount_point...${NC}"
-            safe_rm "$mount_point"
-        else
-            echo -e "${RED}$disk is not mounted or mount point not found.${NC}"
-        fi
-    done
-}
-
 echo -n "Removing .DS_Store files..."
 find / -name '.DS_Store' -type f -delete
 echo -e "${GREEN}Done!${NC}"
@@ -78,10 +64,6 @@ echo -n "Cleaning Dock data sources..."
 killall Dock
 echo -e "${GREEN}Done!${NC}"
 
-# Cleaning external drives
-clean_external_drives
-
 # Adding a free space check after cleaning
 FREE_SPACE=$(df -h / | tail -1 | awk '{print $4}')
 echo -e "${GREEN}Free space after cleaning: $FREE_SPACE${NC}"
-
